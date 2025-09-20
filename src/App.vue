@@ -26,6 +26,9 @@
             <li v-if="isAuthenticated" class="nav-item">
               <router-link to="/buildings" class="nav-link">Buildings</router-link>
             </li>
+            <li v-if="isAuthenticated" class="nav-item">
+              <router-link to="/vendors" class="nav-link">Vendors</router-link>
+            </li>
           </ul>
           <div class="d-flex">
             <router-link v-if="!isAuthenticated" to="/login" class="btn btn-outline-primary me-2"

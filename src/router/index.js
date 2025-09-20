@@ -3,9 +3,10 @@ import HomeView from '../views/HomeView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import LoginView from '../views/LoginView.vue'
 import VerifyEmailView from '../views/VerifyEmailView.vue'
-import RoomsView from '@/views/RoomsView.vue'
-import BuildingsView from '@/views/BuildingsView.vue'
+import RoomsView from '@/views/Rooms/RoomsView.vue'
+import BuildingsView from '@/views/Buildings/BuildingsView.vue'
 import store from '@/store/auth'
+import VendorsView from '@/views/Vendors/VendorsView.vue'
 
 const routes = [
   {
@@ -38,13 +39,19 @@ const routes = [
     path: '/rooms',
     name: 'rooms',
     component: RoomsView,
-    meta: { requiresAuth: true }, // Защищенный маршрут
+    meta: { requiresAuth: true },
   },
   {
     path: '/buildings',
     name: 'buildings',
     component: BuildingsView,
-    meta: { requiresAuth: true }, // Защищенный маршрут
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/vendors',
+    name: 'vendors',
+    component: VendorsView,
+    meta: { requiresAuth: true },
   },
 ]
 
